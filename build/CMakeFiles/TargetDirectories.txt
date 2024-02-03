@@ -1,0 +1,3 @@
+/home/runner/OblongFlusteredZettabyte/build/CMakeFiles/shell.dir
+/home/runner/OblongFlusteredZettabyte/build/CMakeFiles/edit_cache.dir
+/home/runner/OblongFlusteredZettabyte/build/CMakeFiles/rebuild_cache.dir
