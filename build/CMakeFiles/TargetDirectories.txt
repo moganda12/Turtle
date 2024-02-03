@@ -1,3 +1,0 @@
-/workspaces/Turtle/build/CMakeFiles/rebuild_cache.dir
-/workspaces/Turtle/build/CMakeFiles/edit_cache.dir
-/workspaces/Turtle/build/CMakeFiles/shell.dir
