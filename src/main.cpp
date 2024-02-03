@@ -6,6 +6,7 @@
 
 #include "./lexative.hpp"
 #include "./screwup.hpp"
+#include "./skylibs/optional.hpp"
 
 using str = std::string;
 
@@ -75,7 +76,7 @@ int main(int argc, char* argv[]) {
 		//lexes file
 		std::vector<Token> tokens = lexative(contents);
 
-		//nofifies user that compile has succeded
+		//notifies user that compile has succeded
 		std::cout << "Compilation succeded\n";
 		
 		return 0;
