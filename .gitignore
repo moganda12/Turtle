@@ -3,3 +3,6 @@
 replit.nix
 .breapoints
 sh.sh
+build/
+.vscode
+src/main
