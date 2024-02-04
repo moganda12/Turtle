@@ -9,8 +9,8 @@ namespace sky
     class optional {
     public:
     	optional() {
-    		bool isdef = false;
-        	}
+    		isdef = false;
+        }
     	optional(T contenti) {
     		isdef = true;
     		content = contenti;
@@ -26,6 +26,7 @@ namespace sky
 				exit(734678);
 			}
 		}
+		
     private:
 	    bool isdef;
 	    T content;

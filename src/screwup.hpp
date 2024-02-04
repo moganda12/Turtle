@@ -1,5 +1,6 @@
 #pragma once
 
 void screwup(int code) {
-	std::cerr << "Ye screwed up Scewup code:" << code << '\n';
+	std::cerr << "Ye screwed up Screwup code: " << code << '\n';
+	exit(code);
 }
