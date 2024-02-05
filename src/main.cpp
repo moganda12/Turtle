@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "./lexative.hpp"
+#include "./parser.hpp"
 #include "./screwup.hpp"
 #include "./skylibs/optional.hpp"
 #include "./skylibs/string.hpp"
@@ -26,9 +27,14 @@ int main(int argc, char* argv[]) {
 		contents = contents_stream.str();
 
 		//lexes file
-		Lexative lexer = {contents};
+		Lexative lexer = Lexative(contents);
 
 		std::vector<Token> tokens = lexer.lex();
+
+		//parses tokens
+		Parser parser = Parser(tokens);
+
+		node::Exit exit = parser.parse();
 
 		//notifies user that compile has succeded
 		std::cout << "Compilation succeded\n";

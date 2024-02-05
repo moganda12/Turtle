@@ -21,11 +21,11 @@ struct Token {
 
 class Lexative {
 public:
-	inline Lexative(const str& src):
+	inline explicit Lexative(const str& src):
 		m_src(src)
 	{}
 
-	inline std::vector<Token> lex() {
+	std::vector<Token> lex() {
 		std::vector<Token> tokens;
 		str buffer;
 		while(this->peek(0).has_value()) {
@@ -66,11 +66,13 @@ public:
 				screwup(2);
 			};
 		};
+
+		index  = 0;
 		return tokens;
 	}
 private:
 
-	[[nodiscard]] sky::optional<char> peek(int ahead = 1) const {
+	[[nodiscard]] inline sky::optional<char> peek(int ahead = 1) const {
 		if(index + ahead >= m_src.length()) {
 			return {};
 		} else {
@@ -78,10 +80,10 @@ private:
 		};
 	}
 
-	char consume() {
+	inline char consume() {
 		return m_src.at(index++);
 	}
 
 	const str m_src;
-	int index = 0;
+	size_t index = 0;
 };
